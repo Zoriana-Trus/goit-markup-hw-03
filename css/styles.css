@@ -6,7 +6,8 @@
    footer contacts color: rgba(255, 255, 255, 0.6);
    first-bg-color #2F303A;
    second-bg-color:  #F5F4FA;
-   border color: #ECECEC;
+   border color primary: #ECECEC;
+   border color second:  #EEEEEE;
 */
 
  :root {
@@ -65,6 +66,8 @@
    /* logo header a*/
   .site-nav .logo {
    margin-right: 93px;
+   padding-top: 24px;
+   padding-bottom: 25px;
   }
 
   .logo {
@@ -90,18 +93,13 @@
     display: flex;
   }
 
-  .site-nav-list .site-nav-item  {
+  .site-nav-list .site-nav-item:not(:last-child) {
     margin-right: 50px;
-    padding-top: 32px;
-     padding-bottom: 32px;
   } 
-
-  .site-nav-list .site-nav-item:last-child{
-    margin-right: 331px;
-  }
-
  
   .site-nav-item .site-nav-link {
+    padding-top: 32px;
+     padding-bottom: 32px;
     
     color: var(--title-color);
     font-weight: 500;
@@ -120,15 +118,13 @@
     color: var(--accent-color);
   }
 
-
    /* Contacts header  */
   .contacts-list {
    display: flex;
   }
 
-  .contacts-list .contacts-list-item {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  .contacts-list {
+    margin-left: auto;
   }
 
   .contacts-list .contacts-list-item:not(:last-child) {
@@ -136,7 +132,9 @@
   }
 
   .contacts-list-item .contacts-link {
-  
+   padding-top: 32px;
+   padding-bottom: 32px;
+    
    color: var(--primary-text-color);
    font-weight: 500;
    font-size: var(--main-font-size);
@@ -216,6 +214,7 @@
     font-size: var(--main-font-size);
     font-weight: 700;
     line-height: 1.14;
+    letter-spacing: var(--main-letter-spacing);
     text-transform: uppercase;
   }
 
@@ -224,6 +223,7 @@
     margin-bottom: 0;
     font-size: var(--main-font-size);
     line-height: 1.71;
+    letter-spacing: var(--main-letter-spacing);
   } 
 
     /* section about us */
@@ -266,7 +266,6 @@
 
   .our-team-list .our-team-item {
     width: 270px;
-    padding-bottom: 30px;
     background-color: var(--primary-white-color);
   }
   
@@ -274,12 +273,11 @@
     margin-right: 30px;
   }
 
-  .our-team-item .our-team-img {
-    margin-top: 0;
-    margin-bottom: 30px;
+  .our-team-item .our-team-description{
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
-
-  .our-team-item .our-team-title {
+  .our-team-description .our-team-title {
     margin-top: 0;
     margin-bottom: 10px;
 
@@ -291,7 +289,7 @@
     text-align: center;
   }
 
-  .our-team-item .our-team-text {
+  .our-team-description .our-team-text {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 16px;
@@ -300,7 +298,6 @@
     text-align: center;
   }
     
- 
   /* footer */
   .footer {
     padding-top: 60px;
@@ -317,7 +314,6 @@
     color: var(--primary-white-color);
   }
 
-  
   .address .address-text {
     margin-top: 0;
     margin-bottom: 9px;
@@ -328,6 +324,9 @@
     line-height: 1.71;
   } 
 
+  .contact-info-item:not(:last-child){
+    margin-bottom: 9px;
+  }
   .contact-info-item .contact-info-link {
     display: inline-block;
    
@@ -338,14 +337,9 @@
     text-decoration: none;
   }
 
-  .contact-info-item .mail {
-    margin-bottom: 9px;
-  }
- 
-  
    /* Portfolio */
 
-   .portfolio-header{
+   .header{
     border-bottom: 1px solid #ECECEC;
    }
 
@@ -359,7 +353,7 @@
     justify-content: center;
   }
 
-  .portfolio-button-list .portfolio-button-item {
+  .portfolio-button-list  {
     margin-top: 0;
     margin-bottom: 50px;
   }
@@ -421,7 +415,7 @@
 
  .portfolio-cards-list .portfolio-card-item {
    width: 370px;
-   padding-bottom: 20px;
+   border: 1px solid #EEEEEE;
  }
  
  
@@ -441,12 +435,11 @@
    text-decoration: none;
   } 
 
-  .portfolio-card .portfolio-card-img {
-    margin-top: 0;
-    margin-bottom: 20px;
+  .portfolio-card .portfolio-card-description {
+    padding: 20px 24px;
   }
-
- .portfolio-card .portfolio-card-title {
+  
+  .portfolio-card-description .portfolio-card-title {
   margin-top: 0;
   margin-bottom: 4px;
 
@@ -457,7 +450,7 @@
   letter-spacing: 0.06em;
   }
 
- .portfolio-card .portfolio-card-text{
+  .portfolio-card-description .portfolio-card-text{
    margin-top: 0;
    margin-bottom: 0;
 
